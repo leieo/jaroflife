@@ -5,21 +5,25 @@
   </head>
   <body>
   	hello
+
   <?php
+
+  include 'addform.php';
 
   	require 'model.php';
 
     $tasklist = getTasks();
 
-    foreach ($tasklist as $task){
+    foreach ($tasklist as $task):
   ?>
   
-    <h4><?php echo $task ['labeltache']; ?></h4>
-    <h5><?php echo $task ['description']; ?></h5>
+    <h4><?php echo $task ['task_name']; ?></h4>
+    <h5><?php echo $task ['task_description']; ?></h5>
     <br/>
 
   <?php
-    }
+    endforeach;
+
   ?>
   </body>
 </html>
